@@ -1,4 +1,4 @@
-public class Chicken {
+public class Chicken implements Animal{
     private int eggPerSec;
     private double weight;
 

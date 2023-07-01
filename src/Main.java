@@ -36,6 +36,30 @@ public class Main {
         for(var actual : chikens){
             System.out.println(actual);
         }
+        List<Animal> animals = new ArrayList<>();
+        animals.addAll(dogs);
+        animals.addAll(chikens);
+        System.out.println(animals);
+
+        List<Animal> vegyes = new ArrayList<>();
+        List<String> vegyesList = FileReader.reader("res/vegyes.txt");
+        for(var lines : vegyesList){
+            String[] lineAsArray = lines.split(",");
+            String type = lineAsArray[0];
+
+            if (type.equals("kutya")){
+                String name = lineAsArray[1];
+                int age = Integer.parseInt(lineAsArray[2]);
+                String color = lineAsArray[3];
+                animals.add(new Dog(name,age,color));
+            } else if (type.equals("csirke")) {
+                int eggPerSec = Integer.parseInt(lineAsArray[1]);
+                double weight = Double.parseDouble(lineAsArray[2]);
+                animals.add(new Chicken(eggPerSec,weight));
+
+            }
+
+        }
 
 
 
