@@ -51,15 +51,16 @@ public class Main {
                 String name = lineAsArray[1];
                 int age = Integer.parseInt(lineAsArray[2]);
                 String color = lineAsArray[3];
-                animals.add(new Dog(name,age,color));
+                vegyes.add(new Dog(name,age,color));
             } else if (type.equals("csirke")) {
                 int eggPerSec = Integer.parseInt(lineAsArray[1]);
                 double weight = Double.parseDouble(lineAsArray[2]);
-                animals.add(new Chicken(eggPerSec,weight));
+                vegyes.add(new Chicken(eggPerSec,weight));
 
             }
 
         }
+        System.out.println(vegyes);
 
 
 
